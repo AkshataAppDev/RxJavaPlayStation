@@ -1,9 +1,8 @@
-package com.example.rxjavaplaystation
+package com.example.rxjavaplaystation.creation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.rxjavaplaystation.BaseActivity
 import io.reactivex.rxjava3.core.Observable
-import java.util.*
 
 class RxSimpleObservableActivity : BaseActivity() {
 
