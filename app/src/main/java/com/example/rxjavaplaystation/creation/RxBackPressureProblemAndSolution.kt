@@ -1,6 +1,7 @@
-package com.example.rxjavaplaystation
+package com.example.rxjavaplaystation.creation
 
 import android.os.Bundle
+import com.example.rxjavaplaystation.BaseActivity
 import io.reactivex.rxjava3.core.BackpressureStrategy
 import io.reactivex.rxjava3.schedulers.Schedulers
 import io.reactivex.rxjava3.subjects.PublishSubject
