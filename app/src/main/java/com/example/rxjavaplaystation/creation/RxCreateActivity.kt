@@ -17,7 +17,7 @@ class RxCreateActivity : BaseActivity() {
 
         //Will only return Pasta and terminate with an exception bcz of blank string
         //getObservableFromList(listOf("Pasta","","Misal"))
-        //    .subscribe { Timber.d("Received: $it") }
+        //  .subscribe { Timber.d("Received: $it") }
 
     }
 
