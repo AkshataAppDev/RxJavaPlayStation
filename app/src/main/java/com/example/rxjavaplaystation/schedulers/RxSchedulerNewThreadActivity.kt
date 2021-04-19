@@ -14,14 +14,24 @@ class RxSchedulerNewThreadActivity: BaseActivity() {
 
         // starts new thread everytime it is requested on subscribeOn or observOn()
 
-        Observable.just("Hello")
-                .observeOn(Schedulers.newThread())
-                .doOnNext{
-                    Timber.d(" doOnNext :  $it on thread ${Thread.currentThread().name}") // thread 1
-                }
-                .observeOn(Schedulers.newThread())
-                .subscribe{
-                    Timber.d("Received : $it on thread ${Thread.currentThread().name}") // thread 2
-                }
+//        Observable.just("Hello")
+//                .observeOn(Schedulers.newThread())
+//                .doOnNext{
+//                    Timber.d(" doOnNext :  $it on thread ${Thread.currentThread().name}") // thread 1
+//                }
+//                .observeOn(Schedulers.newThread())
+//                .subscribe{
+//                    Timber.d("Received : $it on thread ${Thread.currentThread().name}") // thread 2
+//                }
+
+        var array = mutableListOf<String>( "Paris")
+
+        Observable.fromArray(array)
+                .subscribeOn(Schedulers.newThread())
+                .subscribe { Timber.d("Received 1 : $it on thread ${Thread.currentThread().name}") }
+
+        Observable.fromArray(array)
+                .subscribeOn(Schedulers.newThread())
+                .subscribe { Timber.d("Received 2 : $it on thread ${Thread.currentThread().name}") }
     }
 }
