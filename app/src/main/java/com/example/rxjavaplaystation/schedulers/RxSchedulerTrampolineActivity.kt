@@ -31,5 +31,10 @@ class RxSchedulerTrampolineActivity : BaseActivity() {
                     Timber.d("2 Received $it on thread ${Thread.currentThread().name}")
                 }
 
+
+        // Other Schedulers:
+        // AndroidSchedulers.mainThread()
+        //
+
     }
 }
