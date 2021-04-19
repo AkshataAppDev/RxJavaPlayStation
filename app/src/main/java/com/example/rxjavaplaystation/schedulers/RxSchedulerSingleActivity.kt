@@ -14,6 +14,7 @@ class RxSchedulerSingleActivity: BaseActivity() {
 
         var array = mutableListOf<String>( "Paris")
 
+        // no matter how many observable single will run on single thread
         Observable.fromArray(array)
                 .subscribeOn(Schedulers.single())
                 .subscribe { Timber.d("Received 1 : $it on thread ${Thread.currentThread().name}") }

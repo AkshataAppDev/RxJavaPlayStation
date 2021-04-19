@@ -24,7 +24,9 @@ class RxSchedulerNewThreadActivity: BaseActivity() {
 //                    Timber.d("Received : $it on thread ${Thread.currentThread().name}") // thread 2
 //                }
 
-        var array = mutableListOf<String>( "Paris")
+        var array = mutableListOf<String>( "Paris","Amsterdam","Jerusalem")
+
+        Thread.sleep(500)
 
         Observable.fromArray(array)
                 .subscribeOn(Schedulers.newThread())
