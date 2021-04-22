@@ -16,6 +16,8 @@ class RxObserveOnActivity : BaseActivity() {
         Observable.just("Apple","Orange","Banana")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe{ Timber.d("Received $it on thread ${Thread.currentThread().name}")}    djfnkdjfn
+                .subscribe{ Timber.d("Received $it on thread ${Thread.currentThread().name}")}
+        kfngoksnfg
+        
     }
 }
