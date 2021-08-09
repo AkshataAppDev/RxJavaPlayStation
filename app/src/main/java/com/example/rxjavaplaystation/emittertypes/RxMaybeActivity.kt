@@ -23,6 +23,8 @@ class RxMaybeActivity : BaseActivity() {
          * Notice that there is no more onNext and onComplete and a
          * new notification onSuccess is defined.
          * */
+         
+         // Real world example : When getting suggestions for search terms. or auto suggestions
 
         // onReceive
 
